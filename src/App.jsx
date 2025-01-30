@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.scss'
 import { HomePage } from './Pages/HomePage/HomePage'
-import { CrewPage } from './Pages/CrewPage/CrewPage'
-import { DestinationPage } from './Pages/DestinationPage/DestinationPage'
+import { GastronomyPage} from './Pages/GastronomyPage/GastronomyPage'
+import { DestinationsPage } from './Pages/DestinationsPage/DestinationsPage'
+import { ClimatePage } from './Pages/ClimatePage/ClimatePage'
 import Header from './Components/Header/Header'
 import { Route, Routes } from 'react-router'
 
@@ -14,17 +13,16 @@ function App() {
 
   return (
 
-    <>
+    <div>
       <Header/>
       <Routes>
         <Route path="/" element={<HomePage/>} />
-        <Route path="/crew" element={<CrewPage/>} />
-        <Route path="/destination" element={<DestinationPage />} />
+        <Route path="/gastronomy" element={<GastronomyPage/>} />
+        <Route path="/destinations" element={<DestinationsPage />} />
+        <Route path="/climate" element={<ClimatePage />} />
       </Routes>
- 
-
- 
-    </>
+    
+    </div>
   )
 }
 

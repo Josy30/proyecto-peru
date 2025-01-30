@@ -1,23 +1,51 @@
 import './Header.scss';
+import Logo from "../../assets/logoperu.svg";
+import { useNavigate } from 'react-router';
+
 
 
 function Header(){
 
+    const navigate = useNavigate();
+
+    const handleClick = (route) => {
+        navigate(route)
+    }
+
+
     return (
     <div className='Header-component'>
-        <div className='Header-component__star'></div>
-        <div classname='Header-component__titles'>
+        <div className='Header-component__star'>
+        <img className='logo' src={Logo}/>
+        </div>
+        <div className='Header-component__titles'>
             <div>
-                <span>Home</span>
+                <button 
+                className='Button-header'
+                onClick={() =>handleClick('/')}
+                >Home
+                </button>
             </div>
             <div>
-                <span>Destination</span>
+                <button 
+                className='Button-header'
+                onClick={() =>handleClick('/destinations')}
+                >Destinations
+                </button>
             </div>
             <div>
-                <span>Crew</span>
+                <button 
+                className='Button-header'
+                onClick={() =>handleClick('/gastronomy')}
+                >Gastronomy
+                </button>
             </div>
             <div>
-                <span>Tecnology</span>
+                <button 
+                className='Button-header'
+                onClick={() =>handleClick('/climate')}
+                >Climate
+                </button>
             </div>
 
         </div>
