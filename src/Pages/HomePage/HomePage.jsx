@@ -1,7 +1,14 @@
 import Header from '../../Components/Header/Header';
-import './HomePage.css';
+import { useNavigate } from 'react-router';
+import './HomePage.scss';
 
 function HomePage() {
+
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/destinations');
+    }
 
     return(
         <div className='Head'>
@@ -21,9 +28,15 @@ function HomePage() {
             what you need, an out of this world experience!
             </p>
         </div>
+        <div className='Homepage-component__busquedapadre'>
         <div className='Homepage-component__busqueda'>
+            <button 
+            className='Homepage-component__busqueda__button-explore'
+            onClick={handleClick}>
+            Explore
+            </button>
 
-
+        </div>
         </div>
 
         </div>

@@ -1,0 +1,21 @@
+
+.destinationspage-padre{
+        display: flex;
+        padding: 5rem;
+
+    &__imagen{
+        display: flex;
+    }
+
+    &__texto{
+        display: flex;
+        color: black;
+
+        &_texto__titular{
+            display: flex;
+            color: black;
+        }
+    }
+
+    
+}

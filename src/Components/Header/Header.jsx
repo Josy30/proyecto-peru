@@ -2,8 +2,6 @@ import './Header.scss';
 import Logo from "../../assets/logoperu.svg";
 import { useNavigate } from 'react-router';
 
-
-
 function Header(){
 
     const navigate = useNavigate();
@@ -11,7 +9,6 @@ function Header(){
     const handleClick = (route) => {
         navigate(route)
     }
-
 
     return (
     <div className='Header-component'>
@@ -29,8 +26,8 @@ function Header(){
             <div>
                 <button 
                 className='Button-header'
-                onClick={() =>handleClick('/destinations')}
-                >Destinations
+                onClick={() =>handleClick('/destinations')}>
+                Destinations
                 </button>
             </div>
             <div>

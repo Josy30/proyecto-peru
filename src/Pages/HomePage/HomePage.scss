@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bayon&family=Beiruti:wght@200..900&family=Bellefair&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.Homepage-component{
+    padding: 15rem;
+    display: flex;
+}
+
+
+.Homepage-component__texto{
+    color: white ;
+    flex:1;
+
+
+    
+    span{
+        
+        font-size: 2.5rem;
+        font-family: "Barlow Semi Condensed";
+        
+    }
+
+    h1{
+        font-size: 9rem;
+        font-family: "Bellefair";
+        
+        margin: 0;
+    }
+
+    p{
+        font-size: 1.30rem;
+        
+    }
+
+}
+
+.Homepage-component__busquedapadre{
+display: flex;
+flex: 1;
+align-items: center;
+
+
+
+
+.Homepage-component__busqueda {
+  position: relative;
+  overflow: hidden;
+  color: #18181a;
+  display: inline-block;
+  font-size: 25px;
+  line-height: 15px;
+  padding: 18px 18px 17px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  height: 15rem;
+  width: 15rem;
+  border-radius: 200px;
+  margin: 0 auto;
+  outline: none;
+
+  &__button-explore{
+    background-color: transparent;
+    outline: none;
+    font-size: 2rem;
+  }
+}
+
+.Homepage-component__busqueda button:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+  outline: none;
+}
+
+.Homepage-component__busqueda button:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+  outline: none;
+}
+
+.Homepage-component__busqueda:after {
+
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+  outline: none;
+}
+
+.Homepage-component__busqueda:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+  outline: none;
+}
+
+.Homepage-component__busqueda:hover button:last-child {
+  transform: translateX(-50%) translateY(-100%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+  outline: none;
+
+}
+}
