@@ -1,20 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bayon&family=Beiruti:wght@200..900&family=Bellefair&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
 
 .destinationspage-padre{
         display: flex;
-        padding: 5rem;
+        padding: 10rem;
 
     &__imagen{
         display: flex;
+        height: 35rem;
+
+        .imagen1{
+        width: 45rem;
+        }
+        
     }
 
     &__texto{
         display: flex;
-        color: black;
+        color: white;
+        flex-direction: column;
+        padding: 0 3rem;
 
-        &_texto__titular{
+        &__titular{
             display: flex;
-            color: black;
+            color: white;
+            gap: 3rem;
+            font-family: "Barlow Semi Condensed";
+            font-size: 1.3rem;
+            
         }
+    
+    &__contenido{
+        margin: 1.5rem 0 ; 
+        margin-top: 1rem;
+
+        h1{
+        font-size: 6rem;
+        font-family: "Bellefair";
+        margin: 1rem 0;
+        }
+        
+    }
+
+    &__detalles{
+        display: flex;
+        gap: 3rem;
+        flex-direction: row;
+        
+
+        div{
+        display: flex;
+        flex-direction: column;
+        width: 9rem;
+
+        .detalles1{
+        font-size: 0.90rem;
+        }
+
+        .detalles2{
+        font-size: 1.75rem;
+        width: 10rem;
+        }
+        }
+    }
+        
     }
 
     

@@ -4,7 +4,26 @@ function GastronomyPage (){
     return (
 
         <div>
-            GastronomyPage
+            <div>
+                <div>
+                    <span>Peruvian Cuisine</span>
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+                <div>
+
+                </div>
+            </div>
+            <div>
+
+            </div>
         </div>
 
 
