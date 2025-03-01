@@ -5,9 +5,11 @@ import valle from "../../assets/valle2.jpg";
 import desert from "../../assets/desert2.jpg";
 import rainforest from "../../assets/rainforest2.jpg"
 import { useState } from 'react';
+import { useLocation } from 'react-router';
 
 
 function DestinationsPage (){
+    const location = useLocation();
     const [information, setInformation] = useState({
         titulo:'BEACH',
         texto:"On the beaches of Peru, you can find year-round sunshine and warm weather, especially on beaches like Mancora and Punta Sal, where the temperature during the day is usually semi-tropical, and at night there is a refreshing wind. If you want to watch dolphins and humpback whales, you can visit Punta Sal and Mancora. Although most of the beaches are suitable for water sports, others are calm and without waves, such as Paracas Bay are ideal for a day of total relaxation, without the fear of the strong currents that the ocean often brings.",
@@ -54,7 +56,7 @@ function DestinationsPage (){
         case 'valley':
             setInformation({
                 titulo:'VALLEY',
-                texto:'Peru is home to hidden valleys (river formations descending from the mountains) that offer unique experiences and breathtaking scenery. The Lares valley is known for its hot springs, ideal for relaxation. The Yanahuara valley, dazzles with panoramic views. Another unmissable destination is the Colca Valley, famous for being one of the deepest in the world, and also for having the chance to see condors in their natural habitat; the Sacred Valley of the Incas in Cusco and the Mantaro Valley, which is the largest in the Peruvian highlands. You can also do activities such as hiking, horseback riding, mountain biking, trekking, flora and fauna watching.',
+                texto:'Peru is home to hidden valleys (river formations descending from the mountains) that offer unique experiences and breathtaking scenery. The Lares valley is known for its hot springs, ideal for relaxation. Another unmissable destination is the Colca Valley, famous for being one of the deepest in the world, and also for having the chance to see condors; the Sacred Valley of the Incas in Cusco and the Mantaro Valley, which is the largest in the Peruvian highlands. You can also do activities such as hiking, horseback riding, mountain biking, trekking, flora and fauna watching.',
                 extension:"EXTENSION",
                 extension1:"",
                 numero:"N de playas",
@@ -98,11 +100,11 @@ function DestinationsPage (){
             </div>
             <div className="destinationspage-padre__texto">
                 <div className="destinationspage-padre__texto__titular">
-                    <span className={information.titulo === 'BEACH' ?`SELECTIONADO` : ""} onClick={()=>handleClick("beach")}>BEACH</span>
-                    <span onClick={()=>handleClick("mountain")}>MOUNTAIN</span>
-                    <span onClick={()=>handleClick("valley")}>VALLEY</span>
-                    <span onClick={()=>handleClick("desert")}>DESERT</span>
-                    <span onClick={()=>handleClick("rainforest")}>RAINFOREST</span>
+                    <span className= {information.titulo === 'BEACH' ?`seleccionado` : "no-seleccionado"} onClick={()=>handleClick("beach")}>BEACH</span>
+                    <span className= {information.titulo === 'MOUNTAIN' ?`seleccionado` : "no-seleccionado"} onClick={()=>handleClick("mountain")}>MOUNTAIN</span>
+                    <span className= {information.titulo === 'VALLEY' ?`seleccionado` : "no-seleccionado"} onClick={()=>handleClick("valley")}>VALLEY</span>
+                    <span className= {information.titulo === 'DESERT' ?`seleccionado` : "no-seleccionado"} onClick={()=>handleClick("desert")}>DESERT</span>
+                    <span className= {information.titulo === 'RAINFOREST' ?`seleccionado` : "no-seleccionado"}onClick={()=>handleClick("rainforest")}>RAINFOREST</span>
                 </div>
                 <div className='destinationspage-padre__texto__contenido'>
                     <h1>{information.titulo}</h1>

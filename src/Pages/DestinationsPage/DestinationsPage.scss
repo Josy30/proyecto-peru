@@ -4,6 +4,7 @@
 .destinationspage-padre{
         display: flex;
         padding: 10rem;
+        
 
     &__imagen{
         display: flex;
@@ -28,6 +29,29 @@
             font-family: "Barlow Semi Condensed";
             font-size: 1.3rem;
 
+            .seleccionado{
+            color: white;
+            background-color: transparent;
+            border:none;
+            outline: none;
+            height: 100%;
+            border-bottom: white;
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+            padding: 0;
+            border-radius: 0;
+            }
+
+            .no-seleccionado{
+            color: white;
+            background-color: transparent;
+            border:none;
+            outline: none;
+            height: 100%;
+            padding: 0;
+            border-radius: 0;
+            }
+            
             span{
             cursor: pointer;
             }
@@ -42,6 +66,10 @@
         font-size: 6rem;
         font-family: "Bellefair";
         margin: 1rem 0;
+        }
+
+        p{
+        font-size: 1.2rem;
         }
         
     }

@@ -5,32 +5,96 @@
 color : white;
 display: flex;
 padding: 5rem;
+margin-left: 10rem;
+height: 45rem;
 
     &_descripcion{
-
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
         &_superior{
             font-size: 1.75rem;
             font-family: "Barlow Semi Condensed";
             
+            
         }
 
+        &_contenido{
+            span{
+            font-size: 2rem;
+            font-family: "Bellefair";
+            opacity: 60.00%;
+            margin: 2rem 0;
+            display: block;
+            margin-top:5rem;
+            margin-bottom: 0;
+            
+            }
 
-    &_contenido{
-        span{
-        margin: 2rem 0;
-        display: block;
-        margin-top:5rem;
-        margin-bottom: 0;
-        }
+            p {
+            white-space: pre-line;
+            margin-bottom: 6rem;
+            font-size: 1.3rem;
+            }
 
-        h1{
-        margin: 5rem 0;
-        margin-top: 0;
+            h1{
+            margin: 5rem 0;
+            margin-top: 0;
+            font-family: "Bellefair";
         }
     }
 
+    }
+    &_botones{
+        display: flex;
+        gap: 1rem;
+        height: 100%;
+    
+;
+    align-items: end;
+        .seleccionado{
+            padding: 0;
+            background-color: white;
+            border-radius: 100%;
+            width: 1.2rem;
+            height: 1.2rem;
+            outline: none;
+
+
+        }
+
+        .no-seleccionado{
+            padding: 0;
+            background-color: white;
+            opacity: 40%;
+            border-radius: 100%;
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+        
+
+
+
 
     }
 
+    &_imagen{
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 5rem;
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        &_defecto{
+            width: 40rem;
+        
+        }
+
+        &_ceviche {
+            bottom: 10rem;
+            position: relative;
+            width: 47rem;
+        }
+    }
 
 }

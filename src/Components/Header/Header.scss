@@ -21,7 +21,7 @@
 
     &__titles{
         backdrop-filter: blur(1px);
-        background-color: rgba(247, 248, 249, 0.32);
+        background-color: rgba(0, 0, 0, 0.3);
         display: flex;
         flex : 1;
         padding: 0 4rem;
@@ -30,12 +30,38 @@
         gap: 5rem;
         font-family: "Barlow Semi Condensed";
         font-size: 1.5rem;
+
+        div{
+        height: 100%;
+        }
         
 
         .Button-header{
+            color: white;
             background-color: transparent;
             border:none;
             outline: none;
+            height: 100%;
+            padding: 0;
+            border-radius: 0;
+
+            &:hover{
+                animation: shaking 2s infinite;
+            }
+            
+        }
+
+        .Button-header-chosen{
+            color: white;
+            background-color: transparent;
+            border:none;
+            outline: none;
+            height: 100%;
+            border-bottom: white;
+            border-bottom-style: solid;
+            border-bottom-width: 3px;
+            padding: 0;
+            border-radius: 0;
 
             &:hover{
                 animation: shaking 2s infinite;

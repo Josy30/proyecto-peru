@@ -1,10 +1,12 @@
 import './Header.scss';
 import Logo from "../../assets/logoperu.svg";
 import { useNavigate } from 'react-router';
+import { useLocation } from 'react-router'
 
 function Header(){
 
     const navigate = useNavigate();
+    const location = useLocation();
 
     const handleClick = (route) => {
         navigate(route)
@@ -18,30 +20,30 @@ function Header(){
         <div className='Header-component__titles'>
             <div>
                 <button 
-                className='Button-header'
+                className={location.pathname === '/' ? 'Button-header-chosen' : 'Button-header'}
                 onClick={() =>handleClick('/')}
-                >Home
+                >HOME
                 </button>
             </div>
             <div>
                 <button 
-                className='Button-header'
+            className={location.pathname === '/destinations' ? 'Button-header-chosen' : 'Button-header'}
                 onClick={() =>handleClick('/destinations')}>
-                Destinations
+                DESTINATIONS
                 </button>
             </div>
             <div>
                 <button 
-                className='Button-header'
+            className={location.pathname === '/gastronomy' ? 'Button-header-chosen' : 'Button-header'}
                 onClick={() =>handleClick('/gastronomy')}
-                >Gastronomy
+                >GASTRONOMY
                 </button>
             </div>
             <div>
                 <button 
-                className='Button-header'
+            className={location.pathname === '/climate' ? 'Button-header-chosen' : 'Button-header'}
                 onClick={() =>handleClick('/climate')}
-                >Climate
+                >CLIMATE
                 </button>
             </div>
 
