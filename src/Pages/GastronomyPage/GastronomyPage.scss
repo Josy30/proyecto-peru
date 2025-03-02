@@ -80,9 +80,11 @@ height: 45rem;
 
     &_imagen{
         padding: 4rem;
+        background-color: 0;
         flex: 1;
         display: flex;
         justify-content: center;
+
         &_defecto{
             width: 40rem;
         
