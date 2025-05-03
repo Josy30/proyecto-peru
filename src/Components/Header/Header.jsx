@@ -1,5 +1,4 @@
 import './Header.scss';
-import Logo from "../../assets/logoperu.svg";
 import { useNavigate } from 'react-router';
 import { useLocation } from 'react-router'
 
