@@ -2,6 +2,7 @@ import './Header.scss';
 import { useNavigate } from 'react-router';
 import { useLocation } from 'react-router'
 
+
 function Header(){
 
     const navigate = useNavigate();
@@ -14,7 +15,7 @@ function Header(){
     return (
     <div className='Header-component'>
         <div className='Header-component__star'>
-        <img className='logo' src={Logo}/>
+
         </div>
         <div className='Header-component__titles'>
             <div>
